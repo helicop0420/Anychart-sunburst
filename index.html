@@ -1,0 +1,192 @@
+<div id="anychart-embed-samples-bct-sunburst-chart-01" class="anychart-embed anychart-embed-samples-bct-sunburst-chart-01">
+    <script src="./asset/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="./asset/anychart-sunburst.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="./asset/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <script src="./asset/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+    <div id="ac_style_samples-bct-sunburst-chart-01" style="display:none;">
+    <style>
+        html, body, #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .anychart-credits {
+            display: none;
+            position: initial;
+        }
+        .anychart-tooltip {
+            padding: 0;
+        }
+    </style>
+    </div>
+    <script>(function(){
+    function ac_add_to_head(el){
+        var head = document.getElementsByTagName('head')[0];
+        head.insertBefore(el,head.firstChild);
+    }
+    function ac_add_link(url){
+        var el = document.createElement('link');
+        el.rel='stylesheet';el.type='text/css';el.media='all';el.href=url;
+        ac_add_to_head(el);
+    }
+    function ac_add_style(css){
+        var ac_style = document.createElement('style');
+        if (ac_style.styleSheet) ac_style.styleSheet.cssText = css;
+        else ac_style.appendChild(document.createTextNode(css));
+        ac_add_to_head(ac_style);
+    }
+    ac_add_link('https://cdn.anychart.com/releases/8.11.0/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4');
+    ac_add_style(document.getElementById("ac_style_samples-bct-sunburst-chart-01").innerHTML);
+    ac_add_style(".anychart-embed-samples-bct-sunburst-chart-01{width:100%;height:100%;}");
+    })();</script>
+    <div id="container"></div>
+    <script>
+    anychart.onDocumentReady(function () {
+    
+        // create data
+        var data = [
+          {name: "", value: 500, children: [
+            {name: "Infrastructure", value: 120, children: [
+              {name: "Connectivicity", value: 40, children: [
+                {name: "Tier 1",custom_field: "Connectivity (Tier 1)", custom_content: "<a>Meaningful connection</a> to the internet (4G/broadband equivalent for each connected device)", value: 10},
+                {name: "Tier 2",custom_field: "Connectivity (Tier 2)", custom_content: "Multiple devices online at once with no adverse impact on per-device connectivity", value: 10},
+                {name: "Tier 3",custom_field: "Connectivity (Tier 3)", custom_content: "School serves as a high-speed internet hub for the local area", value: 10},
+                {name: "Tier 4",custom_field: "Connectivity (Tier 4)", custom_content: "<a>Meaningful connection</a> to the internet (4G/broadband equivalent for each connected device)", value: 10}
+              ]},
+              {name: "Data management", value: 40, children: [
+                {name: "Tier 1", custom_field: "Data management (Tier 1)", custom_content: "Routine and effective use of management information systems (MIS)", value: 10},
+                {name: "Tier 2", custom_field: "Data management (Tier 2)", custom_content: "Adoption of interoperable cloud systems", value: 10},
+                {name: "Tier 3", custom_field: "Data management (Tier 3)", custom_content: "Advanced learner analytics used to support management and teaching", value: 10},
+                {name: "Tier 4", custom_field: "Data management (Tier 4)", custom_content: "<a>Meaningful connection</a> to the internet (4G/broadband equivalent for each connected device)", value: 10}
+              ]},
+              {name: "Device access", value: 40, children: [
+                {name: "Tier 1", custom_field: "Device access (Tier 1)", custom_content: "In-class content streaming capability (connected projector or electronic whiteboard) and a computer lab or mobile devices cart in school", value: 10},
+                {name: "Tier 2", custom_field: "Device access (Tier 2)", custom_content: "Sufficient number of devices in the school for children to share in each class", value: 10},
+                {name: "Tier 3", custom_field: "Device access (Tier 3)", custom_content: "Sufficient number of devices in the school for children to share in each class", value: 10},
+                {name: "Tier 4", custom_field: "Device access (Tier 4)", custom_content: "Routine and effective use of management information systems (MIS)", value: 10}
+              ]},
+            ]},
+            {name: "Teachers",value: 120, children: [
+              {name: "Recruitment", value: 40, children: [
+                {name: "Tier 1", custom_field: "Recruitment (Tier 1)", custom_content: "New entrants to the profession undergo testing and/or certification", value: 10},
+                {name: "Tier 2", custom_field: "Recruitment (Tier 2)", custom_content: "Career progression requires professional teaching qualifications", value: 10},
+                {name: "Tier 3", custom_field: "Recruitment (Tier 3)", custom_content: "Teaching is a prestigious, high-value and high-paying career", value: 10},
+                {name: "Tier 4", custom_field: "Recruitment (Tier 4)", custom_content: "In-class content streaming capability (connected projector or electronic whiteboard) and a computer lab or mobile devices cart in school", value: 10}
+              ]},
+              {name: "Training", value: 40, children: [
+                {name: "Tier 1", custom_field: "Training (Tier 1)", custom_content: "Initial teacher training has a significant in-service component, includes digital skills and", value: 10},
+                {name: "Tier 2", custom_field: "Training (Tier 2)", custom_content: "Continuous professional development for all teachers, with dedication of sufficient time and resources", value: 10},
+                {name: "Tier 3", custom_field: "Training (Tier 3)", custom_content: "Training focuses on digital pedagogy, educational psychology and childhood cognitive development", value: 10},
+                {name: "Tier 4", custom_field: "Training (Tier 4)", custom_content: "New entrants to the profession undergo testing and/or certification", value: 10}
+              ]},
+              {name: "Support", value: 40, children: [
+                {name: "Tier 1", custom_field: "Support (Tier 1)", custom_content: "Skilful school leadership with additional support through peer school networks", value: 10},
+                {name: "Tier 2", custom_field: "Support (Tier 2)", custom_content: "Communities of digital practice, with select schools serving as hubs of excellence", value: 10},
+                {name: "Tier 3", custom_field: "Support (Tier 3)", custom_content: "Peer support and mentoring within collaborative teaching teams; expert learning technologists advising on digital practice", value: 10},
+                {name: "Tier 4", custom_field: "Support (Tier 4)", custom_content: "Initial teacher training has a significant in-service component, includes digital skills and", value: 10}
+              ]}
+            ]},
+            {name: "Learners",value: 120, children: [
+                {name: "Instruction", value: 40, children: [
+                    {name: "Tier 1", custom_field: "Instruction (Tier 1)", custom_content: "Focus on fundamentals and teaching at the right level, accessibility and inclusivity; effective use of direct instruction", value: 10},
+                    {name: "Tier 2", custom_field: "Instruction (Tier 2)", custom_content: "Engaging content personalised through technology-mediated teacher insight", value: 10},
+                    {name: "Tier 3", custom_field: "Instruction (Tier 3)", custom_content: "Adaptive content with interdisciplinary components in most subjects", value: 10},
+                    {name: "Tier 4", custom_field: "Instruction (Tier 4)", custom_content: "Adaptive content with interdisciplinary components in most subjects", value: 10}
+                ]},
+                {name: "Assessment", value: 40, children: [
+                    {name: "Tier 1", custom_field: "Assessment (Tier 1)", custom_content: "Routine formative assessment and feedback, use of question banks", value: 10},
+                    {name: "Tier 2", custom_field: "Assessment (Tier 2)", custom_content: "Recording of non-academic skills and extracurricular achievements alongside knowledge", value: 10},
+                    {name: "Tier 3", custom_field: "Assessment (Tier 3)", custom_content: "Widespread use of formative authentic assessment (simulations, project work)", value: 10},
+                    {name: "Tier 4", custom_field: "Assessment (Tier 4)", custom_content: "Focus on fundamentals and teaching at the right level, accessibility and inclusivity; effective use of direct instruction", value: 10}
+                ]},
+                {name: "Skills focus", value: 40, children: [
+                    {name: "Tier 1", custom_field: "Skills focus (Tier 1)", custom_content: "Metacognition and self-regulation, digital fluency skills", value: 10},
+                    {name: "Tier 2", custom_field: "Skills focus (Tier 2)", custom_content: "Careers education, interpersonal skills (collaboration, communication, teamwork)", value: 10},
+                    {name: "Tier 3", custom_field: "Skills focus (Tier 3)", custom_content: "Education for sustainable development and global citizenship, dialogue-based pedagogy", value: 10},
+                    {name: "Tier 4", custom_field: "Skills focus (Tier 4)", custom_content: "Routine formative assessment and feedback, use of question banks", value: 10}
+                ]}
+            ]},
+            {name: "Parents & carers",value: 20, children: [
+                {name: "Engagement", value: 20, children: [
+                    {name: "Tier 1", custom_field: "Engagement (Tier 1)", custom_content: "Regular communication of student progress, support for parents’ participation in home learning", value: 5},
+                    {name: "Tier 2", custom_field: "Engagement (Tier 2)", custom_content: "Parental input to school management decisions and governance", value: 5},
+                    {name: "Tier 3", custom_field: "Engagement (Tier 3)", custom_content: "School for parents: digital skills, remedial learning, personalised intensive support", value: 5},
+                    {name: "Tier 4", custom_field: "Engagement (Tier 4)", custom_content: "Routine formative assessment and feedback, use of question banks", value: 5}
+                ]},
+            ]},
+            {name: "System", value: 120, children: [
+                {name: "Resource allocation", value: 40, children: [
+                    {name: "Tier 1", custom_field: "Resource allocation (Tier 1)", custom_content: "Resources are held at meso level and deployed locally in response to emergent need", value: 10},
+                    {name: "Tier 2", custom_field: "Resource allocation (Tier 2)", custom_content: "Resource allocation responsibility is devolved to the front line, with clear monitoring at meso level", value: 10},
+                    {name: "Tier 3", custom_field: "Resource allocation (Tier 3)", custom_content: "Resources are allocated and managed locally, with meso level responsible for long-term policy direction", value: 10},
+                    {name: "Tier 4", custom_field: "Resource allocation (Tier 4)", custom_content: "Engagement", value: 10}
+                ]},
+                {name: "Accountability", value: 40, children: [
+                    {name: "Tier 1", custom_field: "Accountability (Tier 1)", custom_content: "Accountability protocols set out clearly mapped expectations for central, meso and local levels", value: 10},
+                    {name: "Tier 2", custom_field: "Accountability (Tier 2)", custom_content: "Good practices are identified and circulated around the system through a range of technologies", value: 10},
+                    {name: "Tier 3", custom_field: "Accountability (Tier 3)", custom_content: "Self-improvement is the norm, with high levels of practice-sharing through embedded use of technology", value: 10},
+                    {name: "Tier 4", custom_field: "Accountability (Tier 4)", custom_content: "Resources are held at meso level and deployed locally in response to emergent need", value: 10}
+                ]},
+                {name: "Decision-making", value: 40, children: [
+                    {name: "Tier 1", custom_field: "Decision-making (Tier 1)", custom_content: "Focus on securing minimum standards of effectiveness with clearly mapped protocols for each system level", value: 10},
+                    {name: "Tier 2", custom_field: "Decision-making (Tier 2)", custom_content: "Meso level focus on alignment of local decision-making within a clearly mapped structure", value: 10},
+                    {name: "Tier 3", custom_field: "Decision-making (Tier 3)", custom_content: "Devolved self-improving system with high levels of autonomy at the level of delivery; meso level is facilitative", value: 10},
+                    {name: "Tier 4", custom_field: "Decision-making (Tier 4)", custom_content: "Accountability protocols set out clearly mapped expectations for central, meso and local levels", value: 10}
+                ]}
+            ]}
+          ]}
+        ];
+    
+        // create a chart and set the data
+        var chart = anychart.sunburst(data, "as-tree");
+        chart.calculationMode("parent-dependent");
+        // set the chart title
+        // chart.title().useHtml(true);
+        // chart.title("" +
+        //             "<span style='font-size:12; font-style:italic'>" +
+        //             "Corporate Structure</span>");
+        chart.listen("click", function() {
+            console.log('level1  dfddfdf')
+        })
+        // set the container id
+        chart.container("container");
+    
+        // initiate drawing the chart
+        var animationSettings = chart.animation();
+
+        animationSettings.duration(3000);
+        animationSettings.enabled(true);
+        chart.labels().useHtml(true);
+        chart.tooltip().useHtml(true)
+        // configure labels
+        
+        chart.labels().format(function() {
+            var sales = Math.round(this.value/100000)/10;
+            return this.name;
+        });
+
+        // configure labels of leaves
+        chart.leaves().labels().format(function() {
+            var sales = Math.round(this.value/100000)/10;
+            return this.name;
+        });
+
+        // configure tooltips
+        chart.tooltip().format(function() {
+            console.log('sdf',this.getData('custom_field') )
+            if(this.getData('custom_field') != undefined) {
+                return `<div style="width: 200px">
+                            <div style="background-color:black; color: white; padding: 2px">${this.getData('custom_field')}</div>
+                            <div style="background-color:#FFEEFF; color: black; padding: 2px;">
+                                ${this.getData('custom_content')}
+                            </div>
+                        <div>`;
+            } else {
+                return '';
+            }
+        })
+        chart.draw();
+    });
+    </script>
+    </div>
